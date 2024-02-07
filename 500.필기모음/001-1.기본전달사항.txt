@@ -3,12 +3,12 @@
 
 1. 교재: 6권
 
-2. 평가: 3회차의 프로젝트 산출물
+2. 평가: 3회차의 프로젝트 산출물 //
 
-3. 공식교과서: w3c 스쿨
+3. 공식교과서: w3c 스쿨 //   222
 https://www.w3schools.com/
 
-4. 소스 빌드용 폴더 생성하기!
+4. 소스 빌드용 폴더 생성하기!  
 
 5. 강의 동영상 백업 유튜브: 탐쌤코딩 프론트엔드 2024
 https://www.youtube.com/channel/UCX6SkJ-L1DHBubuQETdBxHw
@@ -21,7 +21,7 @@ https://github.com/tombap8/FED-RF-2nd-2024-TOM
 (1) 디비컷
 https://www.dbcut.com/
 
-(2) 굿디자인웹
+(2) 굿디자인웹 
 https://www.gdweb.co.kr/main/
 
 (3) 어워즈      // 요즘 트랜드 사이트
