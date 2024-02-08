@@ -8,6 +8,15 @@
 		<title>네이버 요약 뉴스</title>
 		<!-- CSS 인터널방식 코드 -->
 		<style>
+			/* 웹폰트 구글 CDN (Content Delivery Network) */
+			@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Myeongjo:wght@700&display=swap');
+			
+			/*
+			font-family: 'Black Han Sans', sans-serif;
+			font-family: 'Nanum Myeongjo', serif;
+			*/
+			
+
 			/* CSS코딩구역 */
 			/*
 				CSS 설정 코딩방식
@@ -26,8 +35,8 @@
 
 			 */
 
-			 /* 공통디자인 : 클래스를 주로 사용함 */
-			 .part{
+			/* 공통디자인 : 클래스를 주로 사용함 */
+			.part {
 				/* 박스모델 5가지 세팅 */
 				/* 가로크기-기본값auto
 				블록의 기본값은 부모박스 채우기
@@ -64,22 +73,59 @@
 
 				(밑줄의 경우 m20이라고 하면 됨)*/
 				margin: 20px auto;
-			 }
+			}
 
-
-			 /* 메인 이미지 크기 변경하기 */
-			 #main-area img{
+			/* 메인 이미지 크기 변경하기 */
+			#main-area img {
 				width: 300px;
 				/* w100이라 하면 width:100px */
 				/* w100p이라 하면 width:100% */
-			 }
+			}
 
-			 /* 상단영역, 하단영역 공통 - 콤마(,)는 그룹선택자*/
-			 header.part,footer.part{
-				color: red;
-			 }
+			/* 상단영역, 하단영역 공통 - 콤마(,)는 그룹선택자*/
+			header.part,
+			footer.part {
+				text-align: center;
+				/* 위에(text-align: center;)는 tac라고 하면 자동으로 써짐 */
+				/* color: red; */
+			}
 
-			 /*
+			/* 상단영역 */
+			#top-area {
+				background-color: #e0fcc4;
+				font-family: "Black Han Sans" sans-serif;
+			}
+			/* 하단영역 */
+			#info-area {
+				background-color: #cecece;
+
+				/* 타이틀
+				.tit {
+					font-family: "Black Han Sans" sans-serif;
+				}
+
+				/* 메뉴
+				.menu {
+					font-family: "Nanum Myeongjo" serif;
+				} */
+
+				/* 메뉴링크 */
+				.menu a {
+					color: #222;
+					/* 글자밑줄없앰 */
+					text-decoration: none;
+					/* 글자크기 */
+					font-size: 24px;
+				}
+				/* 메뉴링크 오버시 */
+				.menu a:hover {
+					text-decoration: overline;
+					text-decoration-style: wavy;
+					color: hotpink;
+				}
+			}
+
+			/*
 			 [선택자들]
 			 1. 타입선택자 : 태그명
 			 2. 아이디/클래스 선택자 : 요소이름
@@ -108,11 +154,8 @@
 					/>
 					<!-- style 속성으로 개별요소에 CSS를 설정할 수 있다! 이런 방식을 인라인 방식이라고 함 -->
 				</a>
-				<a href="">정치</a>
-				<a href="">경제</a>
-				<a href="">사회</a>
-				<a href="">IT/과학</a>
-				<a href="">TV/연예</a>
+				<a href="">정치</a>| <a href="">경제</a>| <a href="">사회</a>|
+				<a href="">IT/과학</a>| <a href="">TV/연예</a>|
 			</div>
 		</header>
 
