@@ -1,9 +1,20 @@
+2/14수요일까지는 계획만 내는거임
+이거 이거 이거중에 고민중이다~
+이런 효과를 넣고 이렇게 하고싶다~
+그래서 어떻게 할거다~ 이런거
+
+
 사이트 후보
 1. 화인컴에스이
 2. 유진그룹
 3.
 4.
 5.
+
+
+
+
+
 
 
 이전기수 보면서 느낀점
@@ -14,27 +25,32 @@
 
 진행 순서
 > 완성도에 초점을 맞출지 디테일에 초점을 맞출지?
-> 메인페이지부터 대충 다 만들고 되는 상세페이지 글1개 그림1개로 하고 되는건 뭐뭐다라고 팝업 띄우까
+> 메인페이지부터 대충 다 만들고, 되는 상세페이지는 글위주1개 그림위주1개
 - 일단 글부터 다 쓰고
 - 배치 다 하고
-- 
+- 효과 넣은 다음에
+- 상세페이지
+- 마지막에 팝업띄우기. 되는곳들만 알려줘잉
 
 이전 기수
-1. 서해원
-사이트
+1. 서해원 / 효과 개쩔. 색감도 좋고 제일 잘한듯
+올가니카
 https://seo-001.github.io/FED-REAL-PJ-SHW/01.%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%84%9C%ED%95%B4%EC%9B%90/index.html
 가이드라인
 chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://seo-001.github.io/FED-REAL-PJ-SHW/01.%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_ppt/%EA%B0%80%EC%9D%B4%EB%93%9C%20%EB%AC%B8%EC%84%9C_%EC%84%9C%ED%95%B4%EC%9B%90.pdf
 
-2. 윤명현
-사이트
+2. 윤명현 / 스크롤 효과 잘했음
+뚜레쥬르
 https://tombap8.github.io/KNG-FED211/800.FED211_PF/%EC%9C%A4%EB%AA%85%ED%98%84/TOUSlesJOURS/index.html
 가이드라인
 chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://tombap8.github.io/KNG-FED211/800.FED211_PF/%EC%9C%A4%EB%AA%85%ED%98%84/%EB%9A%9C%EB%A0%88%EC%A5%AC%EB%A5%B4_%EC%9C%A4%EB%AA%85%ED%98%84.pdf
 
-3. 주리아
-사이트
+3. 주리아 / 무난함. 효과는 거의 없고 그냥 자연스러움
+러쉬
 https://tombap8.github.io/KNG-FED211/800.FED211_PF/%EC%A3%BC%EB%A6%AC%EC%95%84/%EB%9F%AC%EC%89%AC/web/index.html
 가이드라인
 chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://tombap8.github.io/KNG-FED211/800.FED211_PF/%EC%A3%BC%EB%A6%AC%EC%95%84/%EB%9F%AC%EC%89%AC_%EC%A3%BC%EB%A6%AC%EC%95%84.pdf
 
+4. 유혜경
+에어비앤비 https://hyeppyday.github.io/hg-react-pj/#/
+가이드라인 chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://hyeppyday.github.io/hg-react-pj/Airbnb.pdf
