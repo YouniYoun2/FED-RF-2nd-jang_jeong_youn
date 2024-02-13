@@ -27,8 +27,8 @@ https://www.gdweb.co.kr/main/
 (3) 어워즈      // 요즘 트랜드 사이트
 https://www.awwwards.com/
 
-8. 필수 회원가입
-
+8. 필수 회원가입 /
+  
 (1) 닷홈: 회원가입 후 무료호스팅하기!       // 백엔드
 https://www.dothome.co.kr/
 
