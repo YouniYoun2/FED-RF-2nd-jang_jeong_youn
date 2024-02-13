@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<!-- 뷰포트 : 모바일 기기에서 실제 픽셀을 맞춰줌 -->
 		<meta charset="UTF-8" />
+		<!-- 뷰포트 : 모바일 기기에서 실제 픽셀을 맞춰주는 메타설정 -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- 탭에 출력되는 타이틀 -->
-		<title>네이버 요약 뉴스</title>
+		<title>네이버 요약 뉴스 </title>
 		<!-- CSS 인터널방식 코드 -->
-		<style>
+		<style></style>
+		<!-- CSS 익스터널방식 코드 -->
+		<link rel="stylesheet" href="./css/main.css">
+		<!-- <style>
 			/* 웹폰트 구글 CDN (Content Delivery Network) */
 			@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Myeongjo:wght@700&display=swap");
 
@@ -135,9 +138,9 @@
 				text-decoration: overline;
 				text-decoration-style: wavy;
 				color: hotpink;
-			}
+			} -->
 
-			/*
+			<!-- /*
 			 [선택자들]
 			 1. 타입 선택자 : 태그명
 			 2. 아이디/클래스 선택자 : 요소이름
@@ -148,7 +151,7 @@
 			 7. 형제 선택자 : 플러스(+)
 			    예) a+a -> 앞에 a요소가 있는 a요소선택
 
-			 */
+			 */ -->
 		</style>
 	</head>
 	<body>
@@ -157,9 +160,8 @@
 			<!-- 1-1. 타이틀 -->
 			<h1 class="tit">네이버 요약뉴스</h1>
 			<!-- 1-2. 메뉴 -->
-			<nav>
-				<!-- class="menu" -->
-				<a href="#">
+			<nav class="menu">
+				<a href="index.html">
 					<img
 						src="./images/logo.png"
 						alt="네이버 로고"
@@ -177,7 +179,7 @@
 
 		<!-- 2. 메인영역 : 컨텐츠 -->
 		<main id="main-area" class="part">
-			<img src="./images/news.png" alt="뉴스 이미지" />
+			<img src="./images/news.png" alt="메인이미지" />
 		</main>
 
 		<!-- 3. 하단영역 : 회사정보 -->
