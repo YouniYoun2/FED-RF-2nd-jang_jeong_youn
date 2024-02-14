@@ -10,7 +10,7 @@
 /* 서브페이지 타이틀 */
 h2.sub-title{
     /* 글자색 : color (=c) */
-    color: #11c535;
+    /* color: #11c535; */
     /* color: hsla(134, 87%, 43%, 0.918); */
 
     /* 글자크기 : font-size (=fz) */
@@ -70,21 +70,26 @@ h2.sub-title{
 
 /* 정치 */
 .politics{
+    color: #f9fc20;
     background-image: url(../images/titbg1.jpg);
 }
 /* 경제 */
 .economics{
+    color: #ff5c90;
     background-image: url(../images/titbg2.jpg);
 }
 /* 사회 */
 .social{
+    color: #f8ff6c;
     background-image: url(../images/titbg3.jpg);
 }
 /* IT/과학 */
 .it{
+    color: #dc2612;
     background-image: url(../images/titbg4.jpg);
 }
 /* TV/연예 */
 .tv{
+    color: #14d9e7;
     background-image: url(../images/titbg5.jpg);
 }

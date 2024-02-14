@@ -1,0 +1,70 @@
+깃허브, 카카오톡, 구글, 이메일 로그아웃 생활화
+
+
+깃허브 : 소스형상관리툴
+비주얼 : 소스코딩툴
+
+프로젝트 기반 프론트엔드 개발 로드맵
+1~2개월 : UI/UX 퍼블리싱 기초, 프젝:순수웹
+3~4개월 : 하이브리드앱/Progressive Web Apps), 프젝:리액트1차PJ
+5~6개월 : 웹 프론트엔드 개발, 프젝:리액트2차PJ... 주제를 변경하여 SPA
+
+Typescript 개발 경험 있으면 좋은게 요즘 채용공고 유행임
+코딩테스트는 구현.... 그리디..
+
+리액트를 다루는 기술 <- 책 괜찮다고 함
+처음부터 제대로 배우는 라라벨 책도 괜찮다고 함
+근데 이것들은 그냥 '참고'서일 뿐임
+
+깃허브 브라우저사이트에서 중요한건
+오른쪽 내 아이콘 클릭 후 'Your repositories'
+
+HTML : 정보의 구조화.. 
+XML : 데이터를 담는 역할.. HTML의 할아버지임 HTML이 XML을 보고 만든거라서
+
+HTML... hyper text markup 어쩌고... 순서가 없는 웹문서라는 뜻
+
+------
+visual
+alt 누른 상태로 이 줄 클릭, 저 줄 클릭, 그 줄 클릭하면 동시명령이 가능하네~
+
+단축키
+update tag(ctrl alt u), remove tag(ctrl alt r)
+★ ctrl alt a : 감싸기 한번에 하는거
+
+<h3></h3>라거나
+<a href="" taret="_blank">
+ㄴ 이런걸 튜닝한다.. 라고 함. 글자 진하게 한다든지 하이퍼로 링크 만들든지 여튼 꾸미는거
+
+오늘 한 내용은 '500. 필기모음'의 '002-1.HTML기초.txt' 복습하면 됨
+------
+
+
+
+
+
+
+
+
+
+<한번 볼 링크>
+참고사이트
+https://www.w3schools.com/
+강의
+https://www.youtube.com/channel/UCX6SkJ-L1DHBubuQETdBxHw
+수업 깃허브
+https://github.com/tombap8/FED-RF-2nd-2024-TOM
+
+
+<집가서>
+1. vscode(비주얼 스튜디오) 깔기.. 그냥 구글에 vscode 검색하고 깔면 됨
+2. 깔려있는거 다 지우고 (어플.. Extensions(Ctrl+Shift+x)
+3. 설치(extentions에서 검색)
+- korean language pack
+- Material Icon Theme
+4. 깃허브데스크탑도 설치
+https://desktop.github.com/
+
+
+
+
