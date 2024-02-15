@@ -38,7 +38,12 @@
   /* 가로크기-기본값 auto
     블록의 기본값은 부모박스 채우기
     인라인의 기본값은 내용물만큼 */
-  width: 750px;
+ /* width: 750px; */
+
+  /* 최대 가로크기로 유동적인 사이즈 만들기 */
+  max-width: 1000px;
+  /* 최대크기 1000px을 유지하다가 화면 또는 부모박스가 이 크기보다 작아지면 자동으로 auto로 전환되어 가로 스크롤바가 안생기고 크기가 화면에 적응됨 */
+
   /* 세로크기-기본값 auto 
     모든 요소에서 기본값은 내용물만큼
     안주면 기본값 auto로 설정됨 */
@@ -83,10 +88,11 @@
   margin: 20px auto;
 }
 
-/* 메인 이미지 크기 변경하기 */
+/* 메인 이미지 크기 변경하기
 main#main-area > img {
   width: 100%;
 }
+*/
 
 /* 상단영역,하단영역공통 
 - 콤마(,)는 그룹선택자 */
@@ -118,10 +124,9 @@ footer.part {
 .tit {
   font-family: "Diphylleia", serif;
   font-size: 45px;
-  margin: 0;
-  text-shadow: 3px 3px 2px #999;
   color: darkblue;
-  font-family: "Diphylleia", serif;
+  text-shadow: 3px 3px 2px #999;
+  margin: 0;
   margin-bottom: 9px;
 }
 /* 메뉴 */

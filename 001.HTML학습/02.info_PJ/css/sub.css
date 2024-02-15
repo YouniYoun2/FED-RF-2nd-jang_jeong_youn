@@ -105,6 +105,7 @@ h2.sub-title{
 
 /* 언론사 로고 */
 .press-logo img{
+    height: 32px;
     /* 이미지는 가로/세로 중 하나만 주면 비율을 유지하며 변경된다. */
 }
 
@@ -121,34 +122,129 @@ h2.sub-title{
 
 /* 기사 이미지 */
 .article-picture img{
-    width: 100%;
+    width: 70%;
     padding-bottom: 15px;
 }
-
 /* 기사 이미지 설명 */
-.article-picture figcaption {
+.article-picture figcaption{
     /* tac - 글자중앙정렬 */
     text-align: center;
     padding: 0 5px;
-    /* font-size: 15px; */
 }
-
-/* 기사 이미지 설명 글자크기 변경 */
-.article-picture figcaption {
+/* 기사 이미지 설명 글자크기변경 */
+.article-picture figcaption small{
     font-size: 15px;
-    /* small에 글자크기가 지정되어 있으므로 여기에서 글자크기를 변경해야 반영된다. */
+    /* small에 글자크기가 지정되어 있으므로
+    여기에서 글자크기를 변경해야 반영된다! */
 }
 
-/* 기사 내용 */
+/* 기사내용 */
 .contents p{
-    /* 글자 크기 : fz */
+    /* 글자크기 : fz */
     font-size: 17px;
-    /* 줄간격 : lh
-    line-height 줄간격은 글자의 중앙에서 위아래 높이값을 말하며 글자는 중앙에 흐른다.
-    단위는 없을 경우 글자크기의 배수로 세팅됨
+    /* 줄간격 : lh 
+        line-height 줄간격은 글자의 중앙에서
+        위아래 높이값을 말하며 글자는 중앙에 흐른다.
+        단위는 없을 경우 글자크기의 배수로 셋팅됨
     */
-
-    line-height: 1.56;
+    line-height: 1.7;
     /* 글자색 */
-    color: #333; 
+    color: #333;
+}
+
+/* 인라인 인용구 디자인 변경 */
+.contents q{
+    font-weight: bold;
+}
+
+/* mark요소 디자인 변경 */
+.contents mark{
+    display: block;
+    /* 크기요소는 인라인일 때 적용 안됨 */
+    width: 70%;
+    /* 크기를 가진 블록요소 중앙정렬 - 마영오 */
+    margin: 15 auto;
+    /* 글자중앙정렬 : tac */
+    text-align: center;
+
+    /* 박스디자인 변경 */
+    padding: 20px 50px;
+    border-top: 3px solid gray;
+    border-bottom: 3px solid gray;
+
+    /* 배경색 */
+    background-color: #fff;
+    /* 글자색 */
+    color: darkblue;
+    /* 글씨체 : 웹폰트 */
+    font-family: 'Diphylleia', serif;
+    font-weight: bold;
+}
+
+/* 인용구박스 */
+.quote-box{
+    border-top: 2px dashed #ccc;
+    border-bottom: 2px dashed #111;
+    margin: 20px 0;
+    padding: 15px 0;
+}
+
+/* 인용구제목 */
+.quote-box h4{
+    /* 기본 display가 block에 이어서 글씨만큼 크기를 가지려면 inline-block으로 바꿔야한다. */
+    display: inline-block;
+    font-size: 20px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    /* width: 250px; */
+    text-align: center;
+    padding: 15px;
+    box-shadow: 4px 4px 2px #888;
+    margin: 0;
+    /* 박스 그림자 
+    box-shadow : x축 y축 블러 스프레드 색깔
+    1. x축 : 가로축 이동
+    2. y축 : 세로축 이동
+    3. blur : 경계선 흐리게
+    4. spread : 기존 그림자크기보다 더 크게
+    5. 색깔 : 그림자 색
+    *. spread : 내부 그림자일 경우 앞에 inset이라는 키워드를 씀
+    box-shadow : inset x축 y축 블러 스프레드 색깔
+    box-shadow: inset 4px 5px 2px 10px #888;
+    -> spread는 필요시에 작성함
+    */
+}
+
+/* 블록 인용 박스 */
+.quote-box blockquote {
+    /* 기본마진 없애기 */
+    margin: 0;
+    font-size: 15px;
+    line-height: 2.1;
+    text-align: justify;     /* 양쪽정렬 : taj(정렬 예쁘게) */
+    /* 자식요소인 이미지에 float속성을 사용할 경우, 부모박스에서 자식요소를 인식하지 못하는 경우가 발생함
+    이것을 해결하기 위한 방법 중 하나로, 넘치는 요소 숨기기 속성을 세팅하면 된다.*/
+    overflow: hidden; /* 아래 나오는 float에 대한 방어 효과 */
+
+    /* 넘치는 자식요소를 숨기는 설정때문에 그림자가 잘리므로 이를 패딩으로 처리함 */
+    /* padding: 5px 5px 5px 0; */
+    padding: 5px;
+    padding-left: 0;
+}
+/* 블록인용이미지 */
+.quote-box img{
+    /* 기본적으로 이미지는 인라인요소이며 글자가 왼쪽으로 한줄 하단에 나열됨
+    글자가 옆에 올라와서 흘러가게 하려면 float 속성을 사용해야 한다.
+    float: left 이미지는 왼쪽에, 글자는 오른쪽
+    float: right 이미지는 오른쪽에, 글자는 왼쪽
+    */
+    float: right;
+    /* 이미지 옆에 공간주기 */
+    margin-left: 10px;
+    /* 상단여백으로 이미지 이동 */
+    margin-top: 11px;
+    /* 둥근 모서리 */
+    border-radius: 10px;
+    /* 박스 그림자 */
+    box-shadow: 0px 0px 4px #555;
 }
