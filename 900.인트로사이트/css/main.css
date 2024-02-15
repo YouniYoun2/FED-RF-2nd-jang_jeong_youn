@@ -7,9 +7,10 @@ html,body{
     height: 100%;
 }
 body{
+    background-image: url(../../001.HTML학습/02.info_PJ/images/index_FrontEnd.avif) no-repeat center/cover;
+    /* background-image: 
+    linear-gradient(to bottom, rgb(205, 255, 227), rgb(247, 206, 255)); */
 
-    background-image: 
-    linear-gradient(to bottom, rgb(205, 255, 227), rgb(247, 206, 255));
     /*
     [선형 그라데이션] 
     background-image:
