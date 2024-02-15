@@ -7,7 +7,9 @@ html,body{
     height: 100%;
 }
 body{
-    background-image: url(../../001.HTML학습/02.info_PJ/images/index_FrontEnd.jpg) center/cover;
+    background-image: url(../../001.HTML학습/02.info_PJ/images/index_FrontEnd.jpg);
+    /* 아카이브 페이지에 이미지 넣고싶은데 문제 없어보이는데 반응을 안해 */
+
     /* background-image: 
     linear-gradient(to bottom, rgb(205, 255, 227), rgb(247, 206, 255)); */
 
