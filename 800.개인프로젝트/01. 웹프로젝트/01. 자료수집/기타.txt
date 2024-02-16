@@ -93,3 +93,30 @@ https://kommigraphics.com/
 https://halomedia.com/studio/
 -> 마우스 이동시 이동방향으로 컨텐츠영역 자동이동
 (제이쿼리 연습에 있음 -> JS버전으로 만들어볼까?)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.awwwards.com/
+페이지 점수 매기는 이 페이지에서
+페이지 설명, 디자인, 글꼴, 색깔같은거 알려주는데
+포트폴리오 만들때 참고하기
+
+https://www.awwwards.com/sites/loket-design
+여기 내 사이트랑 비슷한 느낌이면서도 효과 많고 괜찮네
+https://www.loketdesign.com/
+
+
+
+
+.
