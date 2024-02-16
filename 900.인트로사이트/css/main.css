@@ -1,15 +1,30 @@
 @charset "utf-8";
 /* 인트로사이트 메인 CSS - main.css */
 
-html,body{
+/* 스크롤 애니메이션 세팅 */
+html{
+    scroll-behavior: smooth;
+       /* html 즉, Root에 부드러운 스크롤 설정을 하면 이동시 스크롤 애니메이션이 연출된다 */
+}
+
+/* 마진, 패딩 초기화 */
+html,body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
-    height: 100%;
 }
+
+
+html,body,.page{
+    height: 100%;   /* 높이값 보이는 화면 기준 채우기 */
+}
+
 body{
-    background-image: url(../../001.HTML학습/02.info_PJ/images/index_FrontEnd.jpg);
+    background:
+    url(../../001.HTML학습/02.info_PJ/images/index_FrontEnd.jpg) no-repeat fixed center;
+    
+    /* no-repeat, center; */
     background-repeat: no-repeat;
-    text-align: center;
+    /* text-align: center; */
     background-position: center;
 
     /* background-image: 
@@ -23,11 +38,27 @@ body{
     to top, to left, to right, to bottom
     */
 }
-.wrap{
+
+/* 메뉴박스 */
+.menu{
+    width: 600px;
+    margin: 0 auto;
+    background-color: hsl(203, 90%, 72%, 0.2);
+    padding: 15px;
+}
+
+/* 메뉴 하위 h1, h2 옆으로 흐르게 display 변경하기 */
+.menu>*{
+    display: inline-block;
+}
+
+/* 컨텐츠박스 */
+.link-box{
     border: 2px dashed darkblue;
     border-radius: 20px;
     width: 600px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    background-color: aliceblue;
 }
