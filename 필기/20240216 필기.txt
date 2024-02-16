@@ -22,3 +22,12 @@ html에 특수문자 넣으려면 뒤에 amp; 넣어야됨
 ex. <h4>오늘의 작품 &amp; 느낌</h4>
 -> 오늘의 작품 & 느낌
 
+화면 중간에 이미지 넣기
+background-position: center;
+
+화면 중간에 이미지 넣기
+text-align: center;
+
+
+
+보더 패딩 컨텐트 그런거 박스 헷갈리지 않게 아예 외워놓기

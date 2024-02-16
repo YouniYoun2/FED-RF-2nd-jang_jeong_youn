@@ -315,9 +315,11 @@ h2.sub-title{
     /* background-image: linear-gradient(-45deg, red 5%, blue 20%, blue 80%, yellow); */
     background-image: linear-gradient(-45deg, rgb(255, 127, 127) 10%, rgb(248, 246, 206) 50%, rgb(255, 174, 0));
 
+    /* background-color: pink; */
+
     /* padding */
     padding: 20px;
-    border: 13px dotted #fb4b4b;    /* 테두리 점선 */
+    border: 5px dotted #fb4b4b;    /* 테두리 점선 */
     /* 
     부모박스에 패딩이 없는 상태에서 첫번째 자신 블록박스의 마진은 부모 바깥쪽으로 나가서 세팅된다
     이유 : 마진은 바깥쪽으로 세팅하는 개념이고, 부모가 이를 세팅하지 않았다면
@@ -330,7 +332,8 @@ h2.sub-title{
     값 : padding-box 패딩 영역까지 표시
     값 : content-box 내용 영역까지 표시 */
     
-    background-clip: border-box;        /* 배경색 관련 영역지정 */
+    /* 배경색 관련 영역지정 */
+    background-clip: border-box;
 
     /*
     [배경관련 시작 영역 지정 : background-origin]
@@ -338,10 +341,14 @@ h2.sub-title{
     값 : padding-box 패딩 영역부터 시작(기본값)
     값 : content-box 내용 영역부터 시작 */
 
-    background-origin: padding-box;    /* 배경이미지 관련 영역지정.. 어디까지 테두리라고 할건지.. 패딩박스까지 테두리라고 할거라고... 주석처리 해보면 앎 */
+    /* 배경이미지 관련 영역지정.. 어디까지 테두리라고 할건지.. 패딩박스까지 테두리라고 할거라고... 주석처리 해보면 앎 */
+    background-origin: border-box;
 
     /* 배경 반복 제거 */
     background-repeat: no-repeat;
+
+    /* 박스 내부 그림자 */
+    box-shadow: inset 0 0 10px #fb4b4b;
 }
 
 /* 작품 타이틀 */
@@ -356,6 +363,22 @@ h2.sub-title{
     참고) 마지막 자식블록요소도 부모박스 하단 마진은 바깥으로 나간다. */
 }
 
-.work figure{
-    color :rgb(0, 251, 255);       /* '뭉크의 절규'에 색깔 넣어봄ㅎㅎ */
+/* 작품명 */
+.work figcaption{
+    font-family: "Gugi", sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* 작품명 인용구 */
+.work cite{
+    /* 이택릭 해제 */
+    font-style: normal;
+    color :rgb(0, 251, 255);
+    /* 글자색 */
+}
+
+/* 작품 이미지 */
+.work img{
+    border: 12px ridge goldenrod;
 }
