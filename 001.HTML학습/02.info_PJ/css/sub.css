@@ -266,3 +266,32 @@ h2.sub-title{
     width: 100%;    /* 동영상 가로크기 키우는거 */
     height: 100%;   /* 동영상 세로크기 키우는거 */
 }
+
+/* 기사원문 */
+.article-link{
+    text-align: right;
+}
+/* 기사원문 a요소 */
+.article-link a {   /* article-link가 블록박스임 */
+    display: inline-block;
+    /* ㄴ 부모박스 인라인 정렬도 적용되고 크기 디자인도 적용되는 display */
+    /* ㄴ 원래는 display: block;이었는데 오른쪽으로 정렬하려고 inline 붙였음.
+    text-align을 안한 이유는 블록이라서 그럼.. 블록을 해제하면 밑에 만든 것들이  */
+    width: 100px;
+    height: 100px;
+    border: 1px solid darkcyan;
+    border-radius: 50%; /* 동그라미 */
+    text-align: center; /* =tac. 글자가 동그라미 가로중앙에 오도록 */
+    line-height: 100px; /* 줄간격을 높이값과 같이 주면 글자가 세로중앙에 오게됨 */
+    font-size: 20px; /* 글자크기 */
+    color: #222;  /* a요소 기본 글자색 변경, 밑줄 없앰 */
+    text-decoration: none; /* =tdn */
+    background-color: #ccc; /* 배경색. ccc정도가 딱 좋은 회색임 */
+}
+/* 기사원문 a요소 마우스 오버시(=갖다댈시) */
+.article-link a:hover {
+    color: hotpink;
+    background-color: aquamarine;
+    box-shadow: 0 0 10px darkblue;
+    /* box-shadow: x y blur (spread) color; */
+}
