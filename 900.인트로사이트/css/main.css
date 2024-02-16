@@ -21,11 +21,12 @@ html,body,.page{
 body{
     background:
     url(../../001.HTML학습/02.info_PJ/images/index_FrontEnd.jpg) no-repeat fixed center;
+    /* 만약 화면에 사진이 꽉 차게 하고싶으면 윗줄 맨 마지막 center 뒤에 /cover를 붙여서 center/cover;가 되게 할 것 */
     
     /* no-repeat, center; */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;   // 위에 no-repeat 했으니까 이건 주석 */
     /* text-align: center; */
-    background-position: center;
+    /* background-position: center;    //위에 center 했으니까 이건 주석 */
 
     /* background-image: 
     linear-gradient(to bottom, rgb(205, 255, 227), rgb(247, 206, 255)); */
