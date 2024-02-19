@@ -382,3 +382,154 @@ h2.sub-title{
 .work img{
     border: 12px ridge goldenrod;
 }
+
+/* 뉴스파트 공통 클래스 */
+.news-box{
+    border-top: 2px dashed #ccc;
+    margin: 20px 0; /* 마진 위아래 양쪽 */
+    padding: 20px 0; /* 패딩 위아래 양쪽 */
+}
+
+/* 뉴스파트 공통 a요소 */
+.news-box a{
+    /* 글자크기 : fz */
+    font-size: 17px;
+    /* 줄간격 : lh */
+    line-height: 2.5;
+    /* 글자색 : c */
+    color: 222px;
+    /* 밑줄 없앰 : tdn */
+    text-decoration: none;
+}
+
+/* 공통 a요소 오버시 */
+.news-box a:hover{
+    color: yellowgreen;
+    text-shadow: 1px 1px 1px #000;
+}
+
+/* 주요뉴스&랭킹뉴스, 분야별뉴스에 말줄임표시 넣기 */
+.news-box li, sec-news dd {
+    /* 블록박스는 내용이 넘치면 줄바꿈이 되는 랩핑박스가 기본이다. 
+    줄바꿈을 방지하는 속성은 white-space:nowrap; (기본값은 normal) */
+
+    /* 1. 줄바꿈 방지 */
+    white-space: nowrap; /* whs */
+    /* 2. 넘치는 내용 숨기기 */
+    overflow:hidden; /* oh */
+    /* 3. 넘치는 텍스트 말줄임표(입, 립스...) */
+    text-overflow: ellipsis; /* tov */
+}
+
+/* 뉴스 타이틀 공통 */
+.news-box h3{
+    font-family: "Black And White Picture", system-ui;
+    font-weight: normal; /* fwn */
+    font-size: 30px; /* fz30 */
+    background-image: linear-gradient(to right, lightblue, transparent);
+    /* 색상명을 transparent로 쓰면 투명 */
+    padding: 10px;
+}
+
+/* 주요뉴스 ul 변경하기 */
+.news-box ul, news-box ol {
+    /* 기본리스트 숨기기 */
+    list-style: none;
+    /* 기본 마진, 패딩 없애기  */
+    margin: 0;
+    padding: 0;
+}
+
+/* 주요뉴스에 가상요소로 아이콘 넣기 */
+.main-news ul li::before{
+    content: '🎈';
+}
+
+.main-news ul li::after{
+
+    content: '🎆';
+    /* content: url(../imges/logo/png) */
+}
+
+/* [CSS의 가상요소 : before, after]
+- 모든 요소는 맨앞과 맨뒤에 가상요소를 사용할 수 있다
+- 가상요소 표기법은 요소명 뒤에 콜론 2개를 겹쳐씀
+- 맨 앞은 before, 맨뒤는 after
+- 필수속성 : conrtent
+- 이미지는 content 속성값으로 url() 사용 */
+
+
+/* 주요 뉴스 li의 가상클래스를 사용한 선택법
+[같은 종류의 자식요소일 경우 선택법]
+:first-child -> 첫번째 자식
+:last-child -> 마지막째 자식
+:nth-child(n) -> n번째 자식(n은 1부터) */
+.main-news li:first-child a{
+    color: red;
+}
+.main-news li:nth-child(2) a{
+    color: blue;
+}
+.main-news li:last-child a{
+    color: green;
+}
+
+
+
+/* 분야별 뉴스 dl */
+.sec-news dl {
+    margin: 0;
+}
+
+/* 분야별 뉴스 dt */
+.sec-news dt{
+border: 4px dashed darkcyan;
+padding: 10px;
+display: inline-block;
+border-radius: 20px;
+}
+
+/* 분야별 뉴스 dd 가상요소 아이콘넣기 */
+.sec-news dd::before{
+    content: '🎄';
+}
+
+/* 분야별 뉴스 dt의 가상클래스를 사용한 선택법
+[2가지 이상의 종류의 자식요소가 있을 경우 선택법]
+:first-of-type -> 같은 타입(요소) 중 첫번째
+:last-of-type -> 같은 타입(요소) 중 마지막째
+:nth-of-type(n) -> 같은 타입(요소) 중 n번째(n은 1부터) */
+
+/* 분야별 뉴스 dt별 글자색, 배경색 변경하기 */
+
+.sec-news dt:first-of-type{     /* 정치 */
+    color: red;
+    background-color: lightgreen;
+    border-color: blue;
+}
+.sec-news dt:nth-of-type(2){     /* 경제 */
+    color: rgb(146, 65, 173);
+    background-color: rgb(46, 148, 46);
+    border-color: rgb(166, 226, 83);
+}
+.sec-news dt:nth-of-type(3){     /* 사회 */
+    color: rgb(204, 231, 82);
+    background-color: rgb(192, 116, 253);
+    border-color: rgb(242, 100, 159);
+}
+.sec-news dt:nth-of-type(4){     /* IT/과학 */
+    color: rgb(169, 169, 169);
+    background-color: rgb(204, 237, 255);
+    border-color: rgb(183, 183, 255);
+}
+.sec-news dt:last-of-type{     /* TV/연예 */
+    color: pink;
+    background-color: rgb(93, 105, 241);
+    border-color: rgb(81, 173, 223);
+}
+
+/* 첫번째 dt를 제외한 나머지 dt의 마진탑 주기 */
+/* 위에꺼 밑에마다 margin-top: 35px;라고 써도 됨 */
+.sec-news dd+dt{
+    margin-top: 35px;
+}

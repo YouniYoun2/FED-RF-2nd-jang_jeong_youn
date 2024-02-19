@@ -231,11 +231,13 @@
 			예) <ul><li></li><div></div></ul> -> 사용불가!
 			-->
 
+
+
 			<!-- 주요뉴스 : ul -->
 			<article class="main-news news-box">
 				<h3>주요뉴스</h3>
 				<ul style="list-style-type: square;">
-					<li>
+					<li>🎁
 						<a
 							href="https://n.news.naver.com/mnews/article/052/0001999704"
 							target="_blank"
@@ -243,7 +245,7 @@
 					</li>
 				</ul>
 				<ul>
-					<li>
+					<li>🎭
 						<a
 							href="https://n.news.naver.com/article/366/0000971008"
 							target="_blank"
@@ -259,16 +261,112 @@
 					<!-- ol은 start로 시작번호 지정옵션. reversed를 주면 역순으로 순서를 보여준다! -->
 					<ol>
 					<li>
-						<a href="https://n.news.naver.com/article/366/0000970104" target="_blank">대한항공·아시아나 합병, 9부 능선 넘었다… 美만 남아</a>
+						<a href="https://n.news.naver.com/article/366/0000970104" target="_blank">1. 대한항공·아시아나 합병, 9부 능선 넘었다… 美만 남아</a>
 					</li>
 					<li>
-						<a href="https://n.news.naver.com/article/366/0000970008" target="_blank">비상하거나 고꾸라지거나… 명암 갈린 신생 항공사들</a>
+						<a href="https://n.news.naver.com/article/366/0000970008" target="_blank">2. 비상하거나 고꾸라지거나… 명암 갈린 신생 항공사들</a>
 					</li>
 					<li>
-						<a href="https://n.news.naver.com/article/366/0000969104" target="_blank">두산밥캣, 지난해 영업익 1조3899억원…역대 최대 실적</a>
+						<a href="https://n.news.naver.com/article/366/0000969104" target="_blank">3. 두산밥캣, 지난해 영업익 1조3899억원…역대 최대 실적</a>
 					</li>
 				</ol>
 			</article>
+
+			<!--
+			[용어 정의 리스트 : dl]
+			dl > dt + dd
+			----------------------
+			dl : 용어 리스트 (defines the description list)
+			dt : 용어 정의 (defines the term)
+			dd : 용어 설명 (description each term)
+			----------------------
+			주의) dl은 반드시 자식요소로 dt와 dd가 반드시 한번 이상 사용되어야 함
+			주의) dt와 dd는 형제관계임(자식아님)->
+			-->
+			<!-- 분야별 뉴스 : dl -->
+			<article class="sec-news news-box">
+				<h3>분야별 뉴스</h3>
+				<dl>
+
+					<dt>정치</dt>
+					<dd>
+						<a href="https://n.news.naver.com/mnews/article/022/0003905510" target="_blank">“‘석사장교’ 조국, 운동권 맞나” 한동훈에 曺 “‘전두환·노태우’에 따지라”></a>
+					</dd>
+					<dd>
+						<a href="https://n.news.naver.com/mnews/article/081/0003431315" target="_blank">김경율 “한동훈 정말 대단… 92점 주겠다”></a>
+					</dd>
+
+					<dt>경제</dt>
+					<dd>
+						<a href="https://n.news.naver.com/mnews/article/421/0007359850" target="_blank">'1만6천' 삼성 초기업노조 출범…"그룹 임금 가이드라인 폐지"(종합)></a>
+					</dd>
+					<dd>
+						<a href="https://n.news.naver.com/mnews/article/011/0004301579" target="_blank">국내 건설사 10곳 중 7곳 "영업익으로 이자 내기도 힘들어"</a>
+					</dd>
+					
+
+					<dt>사회</dt>
+					<dd>
+						<a href="https://n.news.naver.com/mnews/article/031/0000813690" target="_blank">4등급 경유차 조기폐차 지원 확대…DPF 부착 차량도 지원</a>
+					</dd>
+					<dd>
+						<a href="https://n.news.naver.com/mnews/article/001/0014513334" target="_blank">'휴지로 감싸 쓱' 3천만원 상당 칩 훔친 카지노 딜러 구속</a>
+					</dd>
+
+					<dt>IT/과학</dt>
+					<dd>
+						<a href="https://n.news.naver.com/mnews/article/031/0000813665" target="_blank">"올해는 AI PC 원년"…인텔, 성수동 핫플서 '괴물 칩' 심은 최신 노트북 선봬[현장]</a>
+					</dd>
+					<dd>
+						<a href="https://n.news.naver.com/mnews/article/032/0003279694" target="_blank">‘7개월간 2억건’ 카카오엔터 불법 유통물 삭제···“역대 최대”</a>
+					</dd>
+
+					<dt>TV/연예</dt>
+					<dd>
+						<a href="https://entertain.naver.com/read?oid=241&aid=0003330621" target="_blank">르세라핌 "'이지', 내면 집중해 새로운 시도…첫 소절 듣고…</a>
+					</dd>
+					<dd>
+						<a href="https://entertain.naver.com/read?oid=609&aid=0000824699" target="_blank">김나영 "'노래의 신' 신용재 만나고 보니 같이 늙어가는 동네 오빠"(라디오쇼)</a>
+					</dd>
+
+				</dl>
+			</article>
+
+			<!-- 
+				[테이블 요소 : table]
+				table > tbody > tr > td
+				-> tbody는 안쓰고 tr부터 구현해도 브라우저가 자동으로 그려준다
+				주의) table > tr로 직계 선택하게 되면 위와 같은 구조적인 이유로 선택되지 않는다!
+				----------------------
+				((간단한 테이블 작성시 필수요소 3가지!))
+				table : 테이블 박스 부모요소
+				tr : 테이블 행요소(table row)
+				td : 테이블 데이터 요소(table data)
+			 -->
+
+			 <!-- 사진뉴스 : table -->
+			 <article class="photo-news news-box">
+				<h3>사진뉴스</h3>
+				<!-- 3행 3열 테이블 구성하기 -->
+				<table>
+					<tr>
+						<td>1</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			 </article>
+
 		</main>
 
 		<!-- 3. 하단영역 : 회사정보 -->
