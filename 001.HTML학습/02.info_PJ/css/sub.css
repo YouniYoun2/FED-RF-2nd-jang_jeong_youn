@@ -533,3 +533,31 @@ border-radius: 20px;
 .sec-news dd+dt{
     margin-top: 35px;
 }
+
+/* 사진뉴스 박스 */
+/* 타이틀 변경하기 */
+.photo-news h3{
+    /* 배경 그라데이션 없애기 */
+    background-image: none;
+    /* 중앙정렬 */
+    text-align: center;
+}
+/* 타이틀 앞 가상요소 아이콘 넣기 */
+.photo-news h3::before{ /* 왼쪽 */
+    content: '📷';
+    font-size: 32px;
+    margin-right: 10px;
+    vertical-align: -2px;
+}
+.photo-news h3::after{  /* 오른쪽 */
+    content: '📺';
+    font-size: 32px;
+    margin-left: 10px;
+    vertical-align: 1px;
+}
+
+/* 사진 뉴스 테이블 */
+.photo-news table{
+    max-width: 500px;
+    /* 최대 width 지정시 부모박스가 이 크기보다 작아질 때 auto로 전환됨 */
+}
