@@ -1,0 +1,15 @@
+빽팁이라고
+''이렇게 싸는거랑 같은데
+``이렇게 싸면 한줄 안에서 엔터 쳐도 인식됨
+가독성에도 좋고 주석달기 좋겠다
+
+
+'2s,  top 4s 2s,  left 2s 2s, transform 1s 2s';
+
+`2s,
+top 4s 2s,
+left 2s 2s,
+ transform 1s 2s`;
+
+
+
