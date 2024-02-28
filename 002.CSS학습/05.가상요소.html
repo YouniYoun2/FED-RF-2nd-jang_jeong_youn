@@ -106,10 +106,18 @@
 
         /* 반복되는 요소의 앞에 아이콘 가상요소로 넣기 */
         dt::before{
-            content: '❤';
+            content: '💛';
             font-size: 30px;
             vertical-align: 1px;
-            color: red;
+        }
+        dt:nth-of-type(2)::before{
+            content: '🧡';
+        }
+        dt:nth-of-type(3)::before{
+            content: '💚';
+        }
+        dt:nth-of-type(4)::before{
+            content: '💙';
         }
         
         /* dd전체 before에 아이콘 적용하기 */
@@ -130,19 +138,19 @@
             content:'👩‍🦰';
         }
 
-        dd:nth-of-type(13):before   /* 남녀 */
+        dd:nth-of-type(13):before   /* 막줄 남녀 */
         {
             content:'👨👩‍🦰';
         }
 
 
-        /* 스토리의 dd는 아이콘 없애기 */
+        /* dd 중 스토리는 아이콘 없애기 */
         dd:nth-of-type(14)::before{
             display: none;
         }
         
         
-        /* 스토리의 dd 아래 h3 이모지넣기 */
+        /* 스토리의 dd 아래 h3(시놉시스) 이모지넣기 */
         h3::before {
             content:'🎥';
             font-size: 40px;
@@ -152,10 +160,18 @@
         
 
         /* .story의 첫번째 p태그의 첫번째 글자 디자인 변경하기 */
-        
-        
+        .story p:nth-of-type(1)::first-letter{
+            font-size: 50px;
+            color: firebrick;
+            font-weight: bold;
+        }
         
         /* .story의 첫번째 p태그의 첫번째줄 디자인 변경하기 */
+        .story p:nth-of-type(1)::first-line{    /* 이건 페이지 크기가 줄일 때 유용함 */
+            font-size: 25px;
+            color: blueviolet;
+            font-weight: bold;
+        }
         
         
 
@@ -163,19 +179,36 @@
 
         /* 두번째 p태그는 태그로 
         첫번째 글자(b태그), 첫번째 줄(span)변경 */
+        .story p:nth-of-type(2) b{
+            font-size: 50px;
+            color: firebrick;
+        }
+        .story p:nth-of-type(2) span{   /* 이건 페이지 크기가 줄어들었을 때 보기 안좋음 */
+            font-size: 25px;
+            color: blueviolet;
+            font-family: '궁서';
+            font-weight: bold;
+        }
         
         
-
         
-
+        
         /* 기타 가상요소 ::selection */
-        /* 드래그 선택시 글자색 배경색 설정변경! */
-        
-        
-        /* ::selection만쓰면 전체가 다 적용됨! 
-        특정선택자::selection 으로 쓰면 자식태그로 싸지 않은 글자만 적용됨!*/
+        /* 드래그시 글자색과 배경색 설정! */
+
+        ::selection {
+    /* p::selection {
+            ::selection만쓰면 전체가 다 적용됨! 
+            특정선택자::selection 으로 쓰면 자식태그로 싸지 않은 글자만 적용됨!*/
+            
+            color: chartreuse;
+            background-color: hotpink;
+        }
     </style>
 </head>
+
+
+
 
 <body>
     <h1>CSS 가상요소</h1>
