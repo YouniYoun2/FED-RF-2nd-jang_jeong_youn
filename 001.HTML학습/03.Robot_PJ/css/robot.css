@@ -29,6 +29,7 @@ html{
 }
 /* 전체 배경이미지 */
 body {
+	padding-top: 90vh;
 	background: url(../images/bg.jpg) no-repeat fixed top/cover;
 }
 
@@ -71,10 +72,13 @@ h1.logo {
 
 /**************** 2.메인영역 ****************/
 
-/* 2-1.로봇박스 */
+/* 2-1.로봇박스 */ 
 .robot-box {
-	padding-top: 200px;
+	position: fixed;
+    top: 300px;
+    left: 50%;
 	margin-bottom: 560px;
+	transform: translate(124%, -10%) scale(0.3); 
 }
 /* 2-2.로봇머리 */
 .head {
@@ -319,7 +323,7 @@ h1.logo {
 	top: 100%;
 	/* 부모는? .body */
 	width: 70px;
-	height: 200px;
+	height: 230px;
 }
 
 /* 다리 사각형관절 가상요소 공통 */

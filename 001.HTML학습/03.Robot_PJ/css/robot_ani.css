@@ -53,7 +53,7 @@
 
     [ 설정된 키프레임 호출하는 방법 ]
 
-    animation : 이시이지반방마
+    animation : 이시이지반방마💥
     (이름 시간 이징 지연 반복 방향 마지막상태)
 
     1) 이름(animation-name) : keyframe 이름
@@ -67,21 +67,102 @@
         - 대체경로 설정하기 : alternate : 시작->끝,끝->시작 (왔다갔다)
         - 대체경로는 반복횟수가 2이상 또는 infinite 이여야함
     7) 마지막상태(animation-fill-mode) : 애니메이션이 끝났을때
-        - 처음상태로 돌아가는 것이 기본!
+        - 처음상태로 돌아가는 것이 기본!(backwards)
         - 마지막 상태를 유지하고 싶을때 forwards(앞쪽에...즉,애니끝장면)
-
+ 
 
 
 ******************************************/
 
-/* 1. 고로애니 */
+/* 1. 로고 애니 */
 .logo{
-    animation: logo-ani 2s ease-in-out 1s 3 forwards alternate;
+    /* 처음 출발 크기 지정 */
+    transform: scale(2);
+
+    animation:
+    logo-ani 3s linear alternate forwards,              /* 1초 후 3초간 이동애니 세팅 */
+    swing-ani .4s ease-in-out 4s infinite alternate;     /* 4초 후 스윙애니 영원히 세팅 */
 }
 
 @keyframes logo-ani{
-    to{
-        top: 3vw;
-        left: 3vw;
+    0%{     /* 정가운데 출발 */
+        top: calc(50% - 10vw);
+        left: calc(50% - 10vw);
+        transform: scale(2);
+    }
+    20%{    /* 처음 위치 이동 : 왼쪽 위 */
+        top: calc(0% + 5vw);
+        left: calc(0% + 5vw);
+        transform: scale(.5);
+    }
+    40%{    /* 두번째 위치 이동 : 오른쪽 위 */
+        top: calc(0% + 5vw);
+        left: calc(100% - 25vw);
+        transform: scale(.5);
+    }
+    60%{    /* 세번째 위치 이동 : 오른쪽 아래 */
+        top: calc(100% - 25vw);
+        left: calc(100% - 25vw);
+        transform: scale(.5);
+    }
+    80%{   /* 네번째 위치 이동 : 왼쪽 아래 */
+        top: calc(100% - 25vw);
+        left: calc(0% + 5vw);
+        transform: scale(.5);
+        
+    }
+    90%{   /* 처음 위치(왼쪽 위)로 컴백 */
+        top: calc(0% + 5vw);
+        left: calc(0% + 5vw);
+        transform: scale(1);
+    }
+    100%{   /* 다음 스윙애니 출발 각도로 미리 돌려놓기 */
+        top: calc(0% + 5vw);
+        left: calc(0% + 5vw);
+        transform: scale(1) rotate(30deg);
     }
 }
+
+/* 제자리 스윙 애니 */
+@keyframes swing-ani{
+    from{
+        transform: scale(1) rotate(30deg); 
+    }
+    to{ 
+        transform: scale(1) rotate(-30deg);
+    }
+}
+
+/* 2. 로봇이동애니 */
+.robot-box {  
+    /* 애니메이션 : 이시이지반방마 */
+    animation: move-robot 4s ease-in-out 2s forwards;
+    /* 4초후 4초간 한번만 끝상태유지 */
+}
+
+@keyframes move-robot {
+    to {
+        transform: translate(-50%, 0%) scale(0.7);
+    }
+}
+
+/* 로봇 다리 작동 애니 (내가함) */
+/* 왼다리 */
+.leg1 {
+    animation: leg-ani .3s alternate 30;
+}
+@keyframes leg-ani {
+    from{
+        height: calc(0% + 6vw); 
+    } 
+}
+/* 오른다리 */
+.leg2 {
+    animation: leg-ani .3s alternate .3s 30;
+}
+@keyframes leg-ani {
+    from{
+        height: calc(0% + 6vw);
+    }
+}
+
