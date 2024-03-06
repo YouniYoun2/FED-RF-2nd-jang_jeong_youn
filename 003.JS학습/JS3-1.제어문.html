@@ -1,183 +1,190 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS3-1. 제어문 - if문, switch case문, for문, while문</title>
-    <!-- JS코드구역 -->
-    <script>
-      /***************************************
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JS3-1. 제어문 - if문, switch case문, for문, while문</title>
+		<!-- JS코드구역 -->
+		<script>
+			/***************************************
             함수명 : showJumsu
             설명 : 점수에 따른 평가출력하기
                 1. 점수에 따른 메시지 출력
                 2. 점수에 따른 메시지 글자색 변경
                 3. 점수에 따른 칭찬스티커 보이기
         ***************************************/
-      function showJumsu() {
-        // 1. 함수호출확인!
-        // console.log('점수함보자!');
+			function showJumsu() {
+				// 1. 함수호출확인!
+				// console.log('점수함보자!');
 
-        // 2. 대상선정 /////////
-        // 2-1. 점수입력요소 : input#jumsu
-        var jumsu = document.querySelector("#jumsu");
+				// 2. 대상선정 /////////
+				// 2-1. 점수입력요소 : input#jumsu
+				var jumsu = document.querySelector("#jumsu");
 
-        // 2-2.출력요소 : #jexp
-        var jexp = document.querySelector(".jexp");
+				// 2-2.출력요소 : #jexp
+				var jexp = document.querySelector(".jexp");
 
-        // console.log('선택요소들:',
-        // jumsu,jexp);
+				// console.log('선택요소들:',
+				// jumsu,jexp);
 
-        // 3. 입력값 읽어오기 ////////
-        var score = jumsu.value;
-        // value 속성 - 입력된 값을 읽기/쓰기
-        console.log("입력된값:", score);
+				// 3. 입력값 읽어오기 ////////
+				var score = jumsu.value;
+				// value 속성 - 입력된 값을 읽기/쓰기
+				console.log("입력된값:", score);
 
-        // 숫자인지 여부
-        console.log('숫자가 아니니?', isNaN(score));
-        
-        // 4. 입력된값 필터링처리
-        // 4-1. 빈 값 여부 : 공백제거 후 검사
-        // 스페이스바도 문자로 취급하므로 공백제거함수인 trim()을 사용한다.
-        if(score.trim() == "") {
-          // 메시지 #jexp에 넣기
-          jexp.innerHTML = "값을 꼭 입력하세요!!";
+				// 숫자인지 여부
+				console.log("숫자가 아니니?", isNaN(score));
 
-          console.log('값을 꼭 입력하세요');
-          // 기존값 지우기
-          jumsu.value = "";
-          // 포커스 넣기 : focus() 내장함수
-          jumsu.focus();
-          // if문에서 끝나면 아래쪽 함수의 코드를 실행하지 않으려면, return문을 쓰면 리턴을 만나는 순간 함수를 나간다.
-          // return값 -> 값을 생략 가능
-          return;
-        }
-        // 4-2. 숫자 여부 : isNaN() 내장함수로 검사
-        // isNaN : Is Not a Number?
-        // ㄴ 숫자가 아니니? -> 응 숫자가 아니야(true) / 아니야 숫자야(false)
-        else if(isNaN(score)){
-          // isNaN(변수) -> 결과가 true면 숫자 아님
-          // 메시지 넣기
-          jexp.innerHTML = "숫자만 입력하세요";
-          // 기존값 지우기
-          jumsu.value = "";
-          // 포커스 넣기 : focus() 내장함수
-          jumsu.focus();
-          // 리턴문(함수나가기)
-          return;
-        }
-        // 4-3. 범위 여부 : 조건문 검사
+				////// [4번 필터링을 위한 공통 처리 함수] /////
+				var doItNow = function (message) {
+					// message전달변수 : 에러메시지
+					// 메시지 넣기
+					jexp.innerHTML = message;
+					// 메시지 글자색 복원하기(변경 가능성 있음)
+					jexp.style.color = "black";
+					// 기존값 지우기
+					jumsu.value = "";
+					// 포커스 넣기 : focus() 내장함수
+					jumsu.focus();
+				}; /////// doItNow함수///////
 
-        // 5. 출력 메시지 만들기
-        // ((점수별 메시지))
-        // 90점 이상 : 매우잘함
-        // 80점 이상 : 잘함
-        // 70점 이상 : 보통
-        // 60점 이상 : 노력요함
-        // 60점 미만 : 재시험
-        // -> 점수가 담긴 score변수를 검사함!
+				// 4. 입력된값 필터링처리
+				// 4-1. 빈 값 여부 : 공백제거 후 검사
+				// 스페이스바도 문자로 취급하므로 공백제거함수인 trim()을 사용한다.
+				if (score.trim() == "") {
+					// 공통처리함수 호출!
+					doItNow("값을 꼭 입력하세요!");
+					// if문에서 끝나면 아래쪽 함수의 코드를 실행하지 않으려면,
+					// return문을 쓰면 리턴을 만나는 순간 함수를 나간다.
+					// return값 -> 값을 생략 가능
+					return;
+				}
+				// 4-2. 숫자 여부 : isNaN() 내장함수로 검사
+				// isNaN : Is Not a Number?
+				// ㄴ 숫자가 아니니? -> 응 숫자가 아니야(true) / 아니야 숫자야(false)
+				else if (isNaN(score)) {
+					// isNaN(변수) -> 결과가 true면 숫자 아님
 
-        // 메시지 변수
-        var msg;
-        // 글자색 변수
-        var fcolor;
+					// 공통처리함수 호출
+					doItNow("숫자만 입력하세요!");
+					// 리턴문(함수나가기)
+					return;
+				}
+				// 4-3. 범위 여부 : 조건문 검사
+				// 조건 : score가 0 미만이거나 100 초과
+				// 바로 위의 else if 조건에 숫자여부를 검사했으므로 숫자 여부 검사는 다시 할 필요 없음
+				else if (score < 0 || score > 100) {
+					// 공통처리함수 호출!
+					doItNow("0~100 사이의 수만 입력하세요");
+					return; // 리턴문(함수나가기)
+				}
 
-        // 90점이상일때
-        if(score >= 90){
-            msg = "매우잘함";
-            fcolor = "blue";
-        }
+				// 5. 출력 메시지 만들기
+				// ((점수별 메시지))
+				// 90점 이상 : 매우잘함
+				// 80점 이상 : 잘함
+				// 70점 이상 : 보통
+				// 60점 이상 : 노력요함
+				// 60점 미만 : 재시험
+				// -> 점수가 담긴 score변수를 검사함!
 
-        // if(score >= 80 && score < 90){
-        // -> else if를 안쓰고 if를 쓰면
-        // 구간설정을 해야 함!
+				// 메시지 변수
+				var msg;
+				// 글자색 변수
+				var fcolor;
 
-        // 80점이상일때
-        else if(score >= 80){
-            msg = "잘함";
-            fcolor = "green";
-        }
-        // 70점이상일때
-        else if(score >= 70){
-            msg = "보통";
-            fcolor = "purple";
-        }
-        // 60점이상일때
-        else if(score >= 60){
-            msg = "노력요함";
-            fcolor = "orange";
-        }
-        // 60점 미만(그밖의 모든경우->else)
-        else{
-            msg = "재시험";
-            fcolor = "red";
-        }
+				// 90점이상일때
+				if (score >= 90) {
+					msg = "매우잘함";
+					fcolor = "blue";
+				}
 
-        // 6. 화면출력하기 ///////
-        // innerText 는 텍스트 출력
-        jexp.innerText = "평과 결과는" + msg;
-        // 글자색 처리하기
-        jexp.style.color = fcolor;
+				// if(score >= 80 && score < 90){
+				// -> else if를 안쓰고 if를 쓰면
+				// 구간설정을 해야 함!
 
+				// 80점이상일때
+				else if (score >= 80) {
+					msg = "잘함";
+					fcolor = "green";
+				}
+				// 70점이상일때
+				else if (score >= 70) {
+					msg = "보통";
+					fcolor = "purple";
+				}
+				// 60점이상일때
+				else if (score >= 60) {
+					msg = "노력요함";
+					fcolor = "orange";
+				}
+				// 60점 미만(그밖의 모든경우->else)
+				else {
+					msg = "재시험";
+					fcolor = "red";
+				}
 
+				// 6. 화면출력하기 ///////
+				// innerText 는 텍스트 출력
+				jexp.innerText = "평과 결과는" + msg;
+				// 글자색 처리하기
+				jexp.style.color = fcolor;
+			} /////////// showJumsu 함수 ////////////
 
-      } /////////// showJumsu 함수 ////////////
+			// if문 튜닝~~~!
+			if (true) {
+				// console.log("조건통과!!!");
+			}
 
-      // if문 튜닝~~~!
-      if (true) {
-        // console.log("조건통과!!!");
-      }
+			if (false) {
+				// console.log("조건통과!!!");
+			} else {
+				// console.log('불통과!!!');
+			}
 
-      if (false) {
-        // console.log("조건통과!!!");
-      }
-      else{
-        // console.log('불통과!!!');
-      }
+			// 변수를 사용한 불린값체크
+			var condition;
+			//   console.log('할당안된변수값:',condition);
 
-      // 변수를 사용한 불린값체크
-      var condition;
-    //   console.log('할당안된변수값:',condition);
+			// if문처리결과 찍기 함수 ///////////
+			var showResult = function () {
+				if (condition) {
+					console.log(condition, "통과!");
+				} else {
+					console.log(condition, "는 false처리됨!");
+				}
+			}; //////////// showResult 함수 /////////////
 
-    // if문처리결과 찍기 함수 ///////////
-    var showResult = function(){
-        if(condition){
-          console.log(condition,'통과!');
-        }
-        else{
-          console.log(condition,'는 false처리됨!');
-        }
-    }; //////////// showResult 함수 /////////////
+			// 테스트 1 : undefined
+			// 선언후 할당되지 않은 변수값은 undefined임!
+			showResult();
 
-    // 테스트 1 : undefined
-    // 선언후 할당되지 않은 변수값은 undefined임!
-    showResult();
+			// 테스트 2 : 숫자
+			// -> 0은 false, 이외의 모든수는 true
+			// true는 1, false는 0과 1:1매칭됨!
+			condition = 1;
+			// showResult();
+			condition = 0;
+			// showResult();
+			condition = -5456476.33;
+			// showResult();
 
-    // 테스트 2 : 숫자
-    // -> 0은 false, 이외의 모든수는 true
-    // true는 1, false는 0과 1:1매칭됨!
-    condition = 1;
-    // showResult();
-    condition = 0;
-    // showResult();
-    condition = -5456476.33;
-    // showResult();
+			// 테스트 3 : null
+			// -> '빈값'을 의미하는 데이터
+			condition = null;
+			// showResult();
 
-    // 테스트 3 : null 
-    // -> '빈값'을 의미하는 데이터
-    condition = null;
-    // showResult();
+			// 테스트 4 : 비교연산자
+			// 비교연산자는 결과로 true/false가 나옴
+			condition = 34 < 1;
+			// showResult();
 
-    // 테스트 4 : 비교연산자
-    // 비교연산자는 결과로 true/false가 나옴
-    condition = 34<1;
-    // showResult();
+			// 테스트 5 : 선언된적이 없는 변수
+			// -> 선언안된 변수를 사용하면 에러처리됨!
+			// condition = mymy;
+			// showResult();
 
-    // 테스트 5 : 선언된적이 없는 변수
-    // -> 선언안된 변수를 사용하면 에러처리됨!
-    // condition = mymy;
-    // showResult();
-
-      /*************************************** 
+			/*************************************** 
        [ if문 ]
         - 조건문을 검사하여 true이면
         중괄호안의 코드가 실행되는 제어문
@@ -224,50 +231,50 @@
 
             if(aa>10) my = "ㅎㅎㅎ";
        ***************************************/
-    </script>
-    <!-- CSS코드구역 -->
-    <style>
-      h1 {
-        font-size: 4vw;
-      }
-      h2 {
-        font-size: 3vw;
-      }
-      body,
-      h3,
-      input,
-      button,
-      select {
-        font-size: 2vw;
-      }
-      .tit {
-        text-align: center;
-        background-image: linear-gradient(to bottom, lightgreen, lightsalmon);
-      }
+		</script>
+		<!-- CSS코드구역 -->
+		<style>
+			h1 {
+				font-size: 4vw;
+			}
+			h2 {
+				font-size: 3vw;
+			}
+			body,
+			h3,
+			input,
+			button,
+			select {
+				font-size: 2vw;
+			}
+			.tit {
+				text-align: center;
+				background-image: linear-gradient(to bottom, lightgreen, lightsalmon);
+			}
 
-      body {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 class="tit">JS 제어문</h1>
-    <hr />
-    <!-- if문 연습 -->
-    <div class="bx-if">
-      <h2 class="tit">if문 연습</h2>
-      <h3 class="jexp">평가출력</h3>
-      <label for="jumsu">점수입력:</label>
-      <input
-        type="text"
-        id="jumsu"
-        placeholder="점수를 입력하세요!"
-        maxlength="3"
-        onkeypress="
+			body {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="tit">JS 제어문</h1>
+		<hr />
+		<!-- if문 연습 -->
+		<div class="bx-if">
+			<h2 class="tit">if문 연습</h2>
+			<h3 class="jexp">평가출력</h3>
+			<label for="jumsu">점수입력:</label>
+			<input
+				type="text"
+				id="jumsu"
+				placeholder="점수를 입력하세요!"
+				maxlength="3"
+				onkeypress="
             if(event.keyCode == 13) showJumsu()
         "
-      />
-      <!-- 
+			/>
+			<!-- 
         [ onkeypress 이벤트 속성 ]
         -> 키보드를 치면 발생하는 이벤트 속성
         if조건문
@@ -281,7 +288,7 @@
         (리턴키는 carriage return)
         https://www.w3schools.com/charsets/ref_html_ascii.asp
        -->
-      <!-- 
+			<!-- 
             [ label요소 ]
             input요소의 설명라벨요소
             - for속성 : 클릭시 아이디 input요소로 포커스이동
@@ -291,7 +298,7 @@
             - placeholder  -> 안내문구출력
             - maxlength -> 최대입력 글자수 제한
          -->
-      <button class="sbtn" onclick="showJumsu()">평가하기</button>
-    </div>
-  </body>
+			<button class="sbtn" onclick="showJumsu()">평가하기</button>
+		</div>
+	</body>
 </html>
