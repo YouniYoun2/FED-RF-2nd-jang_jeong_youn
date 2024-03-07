@@ -149,7 +149,7 @@
 /* 로봇 다리 작동 애니 (내가함) */
 /* 왼다리 */
 .leg1 {
-    animation: leg-ani .3s alternate 30;
+    animation: leg-ani .3s alternate 21;
 }
 @keyframes leg-ani {
     from{
@@ -158,7 +158,7 @@
 }
 /* 오른다리 */
 .leg2 {
-    animation: leg-ani .3s alternate .3s 30;
+    animation: leg-ani .3s alternate .3s 21;
 }
 @keyframes leg-ani {
     from{
@@ -221,6 +221,57 @@
 }
 @keyframes left-arm-ani3 {
     to{
-        transform: rotate(30deg);   /* 회전 */
+        transform: rotate(70deg);   /* 회전 */
     }
 }
+
+
+/* 5. 로봇 오른팔 손흔들기 */
+.arm2{
+    animation:
+    /* 팔 올리기 */
+    right-arm-ani1 .4s 5s forwards,
+    /* 팔 흔들기(팔 올린 후 지연 9.4초) */
+    right-arm-ani2 1s ease-in-out 5.4s infinite alternate;
+}
+
+/* 팔 올리기 키프레임 */
+@keyframes right-arm-ani1 {
+    to{
+        transform: rotate(-150deg);
+    }
+}
+/* 팔 흔들기 키프레임 */
+@keyframes right-arm-ani2 {
+    to{
+        transform: rotate(-130deg);
+    }
+}
+
+/* 오른쪽 팔꿈치 살짝 움직이기 */
+.arm2 span{
+    animation: right-arm-ani3 1s ease-in-out 5.4s infinite alternate-reverse;
+}
+/* 오른쪽 팔꿈치 키프레임 */
+@keyframes right-arm-ani3 {
+    to {
+        transform: rotate(-25deg);
+    }
+}
+
+/* 오른손 */
+.arm2 span::after{
+    animation: right-arm-ani4 1s 5s forwards;
+}
+/* 오른손 키프레임 */
+@keyframes right-arm-ani4 {
+    to {
+        transform: rotate(-15deg);
+        left: -13px;
+    }
+}
+
+/* 말풍선 나타내기 애니 */
+/* .link-title{
+    animation: tool-box 1s ease-in 1s forwards;
+} */

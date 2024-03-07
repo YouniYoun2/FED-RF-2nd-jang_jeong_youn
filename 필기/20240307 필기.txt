@@ -1,0 +1,15 @@
+이시이지반방마
+alternate가 자연스럽게 흔들어주는 기능.. 이거 없으면 드르륵 탁 드르륵 탁 됨
+
+css에서
+/* 공사중 표시 */
+body * {
+	outline: 2px dashed yellow;
+}
+
+F12에 나오는 element.style
+
+
+폰트
+스두크/줄체
+스타일 두께 크기/줅간격 
