@@ -55,7 +55,7 @@ h1.logo {
 	width: 20vw;
 	height: 20vw;
 	border-radius: 50%;
-	z-index: 999;
+	z-index: 3;
 	background: pink url(../images/robot_03.png) no-repeat center/auto 100%;
 	box-shadow: inset 0 0 20px 5px #000, 0 0 20px 5px #ffcf7b;
 
@@ -75,10 +75,10 @@ h1.logo {
 /* 2-1.로봇박스 */ 
 .robot-box {
 	position: fixed;
-    top: 300px;
+    top: 50px;
     left: 50%;
-	margin-bottom: 560px;
-	transform: translate(124%, -10%) scale(0.3); 
+	margin-bottom: 560px; 
+	transform: translate(100%, -10%) scale(0.2); 
 }
 /* 2-2.로봇머리 */
 .head {
@@ -148,9 +148,9 @@ h1.logo {
 .mouth {
 	position: absolute;
 	top: 190px;
-	left: 82px;
+	left: 84px;
 	width: 80px;
-	height: 35px;
+	height: 30px;
 	background: url(../images/mouth.png) no-repeat center/cover;
 }
 
@@ -180,7 +180,7 @@ h1.logo {
 .body {
 	position: relative;
 	/* 부모자격 - 하위직계 자식 div들 */
-	width: 220px;
+	width: 200px;
 	height: 400px;
 	/* 마영오~! */
 	margin: 0 auto;
@@ -197,14 +197,14 @@ h1.logo {
 	position: absolute;
 	/* 부모는? .body */
 	top: 0;
-	left: -5%;
-	width: 110%;
+	left: 0;
+	width: 100%;
 	height: 55%;
 	background-image: linear-gradient(to bottom, rgb(255, 255, 149), #fa68ff);
 	border-radius: 30% 30% 30% 30%;
 }
 
-/* 몸통 가상요소로 하의 만들기 */
+/* 몸통 가상요소로 하의(치마) 만들기 */
 .body::after{
 	content: '';
 	position: absolute;
@@ -215,6 +215,7 @@ h1.logo {
 	height: 60%;
 	background-image: linear-gradient(to bottom, rgb(255, 163, 163), #ffcf7b);
 	border-radius: 10% 10% 0 0;
+	z-index: 2;
 }
 
 /* 목 */
@@ -238,15 +239,16 @@ h1.logo {
 	position: absolute;
 	width: 70px;
 	height: 70px;
+	z-index: 3;
 }
 /* 왼어깨 */
 .shdr1 {
-	left: -75px;
+	left: -70px;
 	border-radius: 30px 0 0 30px;
 }
 /* 오른어깨 */
 .shdr2 {
-	right: -75px;
+	right: -70px;
 	border-radius: 0 30px 30px 0;
 }
 
@@ -321,6 +323,7 @@ h1.logo {
 .leg {
 	position: absolute;
 	top: 100%;
+	border-radius: 20px 20px 0 0;
 	/* 부모는? .body */
 	width: 70px;
 	height: 230px;
@@ -421,6 +424,7 @@ h1.logo {
 	/* 배경공통 */
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+
 }
 /* 왼손 */
 .arm1 span::after {
@@ -428,6 +432,7 @@ h1.logo {
 	background-image: url(../images/hand_right.png);
 	/* left위치값 */
 	left: -20px;
+	z-index: 999;
 }
 /* 오른손 */
 .arm2 span::after {
@@ -441,8 +446,8 @@ h1.logo {
 .tv {
 	position: absolute;
 	top: 30px;
-	left: 22px;
-	width: 178px;
+	left: 15px;
+	width: 170px;
 	height: 136px;
 	background: url(../images/tv.jpg) no-repeat 0/100% 100%;
 }
