@@ -5,7 +5,7 @@
 @import url(./reset.css);
 @import url(./core.css);
 @import url(./common.css);
-@import url(./grid_12_float.css);   /* 그리드_12_플롯 불러오기 */
+@import url(./grid_12_flex.css);   /* 12그리드 불러오기 */
 
 /* 공사중 표시 */
 body * {
