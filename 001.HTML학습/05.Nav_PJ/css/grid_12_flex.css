@@ -26,5 +26,5 @@
 /* -> 플렉스 박스는 싸고있는 부모를 설정함 */
 .cont-box{
     height: 100%;
-    display: flex;
+    display: flex;  /* 직계자식요소가 옆으로 흐름 */
 }
