@@ -117,6 +117,10 @@ function insertMini(){
  함수명 : resetMini
  기능   : 파란박스의 미니언즈 이미지 모두 삭제 및 개수 초기화
 *****************************************/
+/* 위에서 리셋버튼 이벤트 함수와 연결시킨 내용..
+rbtn.onclick = resetMini;
+*/
+
 function resetMini() {
     // 1. 함수호출확인
     console.log('미니언즈 리셋~~!');
