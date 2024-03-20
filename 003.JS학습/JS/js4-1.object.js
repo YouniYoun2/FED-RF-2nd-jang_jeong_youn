@@ -1,5 +1,31 @@
 // 나의 영화 초이스 객체 JS
 
+
+
+// 정윤이의 오브젝트
+// 변경가능하게 let으로 선언한다
+let myObj = {};
+// 오브젝트 형만 만들고 객체내용은 아래에서
+
+// 1. 영화제목
+myObj.title = "용감한 돌고래 벨루와 바닷속 친구들";
+// 2. 감독
+myObj.director = "니콜라 르메이";
+// 3. 배우
+myObj.actor = "돌고래 범고래 참치";
+// 4. 장르
+myObj.genre = "애니메이션";
+// 5. 관람가
+myObj.ratings = "전체관람가";
+// 6. 예고편
+myObj.trailer = function () {
+  console.log("예고편:영화아이디");
+  // 예고편 플레이 함수호출
+  playMovie("_bm91mlFaJI");
+}; ////// trailer 함수 //////
+
+
+
 // 민지의 오브젝트!
 // 자신만의 오브젝트! -> 변경가능하게 let으로 선언한다!
 let mjObj = {};
@@ -261,28 +287,5 @@ ironObj.ratings = "12세";
 ironObj.trailer = function () {
   console.log("예고편:영화아이디");
   //  예고편 플레이 함수호출!
-
   playMovie("vABfjuXZhYY");
 }; ///////////trailer 메서드 /////////////////
-
-// 정윤이의 오브젝트
-// 변경가능하게 let으로 선언한다
-let jjyObj = {};
-// 오브젝트 형만 만들고 객체내용은 아래에서
-
-// 1. 영화제목
-jjyObj.title = "용감한 돌고래 벨루와 바닷속 친구들";
-// 2. 감독
-jjyObj.director = "니콜라 르메이";
-// 3. 배우
-jjyObj.actor = "돌고래 범고래 참치";
-// 4. 장르
-jjyObj.genre = "애니메이션";
-// 5. 관람가
-jjyObj.ratings = "전체관람가";
-// 6. 예고편
-jjyObj.trailer = function () {
-  console.log("예고편:영화아이디");
-  // 예고편 플레이 함수호출
-  playMovie("_bm91mlFaJI");
-}; ////// trailer 함수 //////
