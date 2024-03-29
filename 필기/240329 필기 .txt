@@ -1,0 +1,11 @@
+
+
+
+display:none을 해야지 일단 안보이는거구나 아
+
+position
+static : 기본값(이동불가)
+relative : 요소 
+absolute :
+fixed : 스크롤 해도 붙어있음 나무에 걸린 풍선처럼
+sticky : 스크롤 해도 그대로 붙어있음
