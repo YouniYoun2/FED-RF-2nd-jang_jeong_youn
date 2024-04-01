@@ -2,7 +2,7 @@ this
 인터발(interval)
 ===
 -webkit-
-forEach
+forEach★
 이벤트변수
 기타
 팁
