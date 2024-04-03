@@ -29,22 +29,19 @@ ol {
 /**************************************/
 
 
-#container {
+#contents {
     /*최상위부모*/
     position: relative;
     width: 1381px;
     margin: 0px auto;
 }
 
-#container>header {
-    position: relative;
-    width: 100%;
-    height: 222px;
-}
 
-#container>section {
+#contents>section {
     /*슬라이드부모*/
     position: relative;
+    top: 200px;/* 임시 */
+    left: 100px;/* 임시 */
     width: 913px;
     height: 564px;
     float: left;
@@ -131,25 +128,4 @@ ol {
     /*회색이미지만 투명하게*/
     opacity: 1;
     /*우선적용!*/
-}
-
-#container>aside {
-    position: relative;
-    width: 467px;
-    height: 564px;
-    float: left;
-}
-
-#container>footer {
-    position: relative;
-    width: 100%;
-    height: 80px;
-    background-color: #ccc;
-    clear: both;
-    /*float해제*/
-    font-size: 9px;
-    color: #fff;
-    text-align: center;
-    box-sizing: border-box;
-    padding-top: 10px;
 }
